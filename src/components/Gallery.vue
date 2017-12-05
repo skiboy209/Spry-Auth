@@ -39,7 +39,7 @@ export default {
   border-radius:2px;
   height: 5vh;
   display: block;
-  margin: 2vh auto;
+  margin: 2vh;
 } #nextImg:active{
   background-color:darkgreen;
 }

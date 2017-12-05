@@ -7,8 +7,10 @@ import * as mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
+  parts: [],
   count: 0,
   history: [],
+  frameNum: 0,
   imagecount: 0,
   isMobile: false
 }

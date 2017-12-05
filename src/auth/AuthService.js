@@ -20,7 +20,7 @@ export default class AuthService {
     redirectUri: AUTH_CONFIG.callbackUrl,
     audience: `http://localhost:8080/`,
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid email profile'
   })
 
   login () {

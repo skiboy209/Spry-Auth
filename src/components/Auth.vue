@@ -3,27 +3,37 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Auth0 - Vue</a>
+          <a id="navbar-brand" href=""><img id="banner" src="../assets/SpryBanner.jpg"/></a>
 
           <router-link :to="'/'"
-            class="btn btn-primary btn-margin">
+            class="btn nav-btn btn-margin">
               Home
           </router-link>
 
           <router-link :to="'counter'"
-            class="btn btn-primary btn-margin">
+            class="btn nav-btn btn-margin">
               Counter
           </router-link>
 
+          <router-link :to="'gallery'"
+            class="btn nav-btn btn-margin">
+              Gallery
+          </router-link>
+
+          <router-link :to="'bikebuilder'"
+            class="btn nav-btn btn-margin">
+              Bike Builder
+          </router-link>
+
           <button
-            class="btn btn-primary btn-margin"
+            class="btn nav-btn btn-margin"
             v-if="!authenticated"
             @click="login">
               Log In
           </button>
 
           <button
-            class="btn btn-primary btn-margin"
+            class="btn nav-btn btn-margin"
             v-if="authenticated"
             @click="logout">
               Log Out
@@ -33,7 +43,7 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div id="ContentContainer">
       <router-view 
         :auth="auth" 
         :authenticated="authenticated">
@@ -71,6 +81,21 @@ export default {
 @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 
 .btn-margin {
-  margin-top: 7px
+  margin-top: 7px;
+}
+.btn {
+  background-color:black;
+  color:white;
+}
+.nav-button {
+ border:none;
+ text-decoration:none;
+ color:white;
+ background-color:black;
+}.nav-btn:hover {
+ color:grey;
+}
+#banner {
+  height:50px;
 }
 </style>

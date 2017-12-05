@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="content">
     <h4 v-if="authenticated">
         You are logged in!
     </h4>
@@ -15,8 +15,14 @@
     props: ['auth', 'authenticated']
   }
 </script>
-<style>
+<style scoped>
   a {
     cursor: pointer;
+  }
+  #content{
+    color:white;
+    height:89vh;
+    background-size:cover;
+    background-image: url("../assets/SpryLandscape.jpg");
   }
 </style>
